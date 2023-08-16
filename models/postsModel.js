@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../connection/index');
 //MariaDB建立資料表，其資料表的名稱必須 + s
-const Posts = sequelize.define('order' /* order為資料表 */, {
+const Posts = sequelize.define('list' /* order為資料表 */, {
   id:{
     type:DataTypes.INTEGER,
     allowNull:false,
@@ -15,5 +15,7 @@ const Posts = sequelize.define('order' /* order為資料表 */, {
     allowNull:false,
   },
   timestamps: true,
+  // createdAt:false,
+  // updatedAt:'updateTimestamp'
 });
 module.exports = {Posts, sequelize};

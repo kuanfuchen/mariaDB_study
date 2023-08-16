@@ -24,6 +24,6 @@ app.use('/posts', indexRouter);
 app.use('/users', usersRouter);
 
 process.on('unhandledRejection', (reason, promise)=>{
-  console.log({'Unhandled Rejection at':promise, '理由':reason});
+  console.log('Unhandled Rejection at', promise, '理由', reason);
 })
 module.exports = app;

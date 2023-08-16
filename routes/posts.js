@@ -8,6 +8,5 @@ router.get('/:id', (req,res, next)=> postsController.findOneInformation(req, res
 router.post('/',(req, res, next) => postsController.createInformation(req, res, next));
 router.patch('/:id',(req,res, next)=> postsController.updateInformation(req,res,next));
 router.delete('/:id', (req,res,next)=> postsController.deleteOneInformation(req, res, next));
-// router.delete('/',(req,res,next)=>{
-// })
+router.delete('/',(req,res,next)=>postsController.deleteAllInformation(req, res, next));
 module.exports = router;
